@@ -1,12 +1,14 @@
 /**
  * 
  */
-package com.flipkart.application;
+package com.flipkart.client;
 import com.flipkart.bean.FlipFitGym;
 import com.flipkart.bean.FlipFitGymOwner;
 import com.flipkart.bean.FlipFitSlots;
 import com.flipkart.business.FlipFitGymOwnerService;
+import com.flipkart.business.FlipFitGymOwnerServiceOperation;
 
+import java.net.StandardSocketOptions;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ import java.util.Scanner;
  */
 public class GymFlipFitGymOwnerMenu {
 
+    FlipFitGymOwnerService flipFitGymOwnerService = new FlipFitGymOwnerServiceOperation();
     static Scanner obj = new Scanner(System.in);
 
     /*
@@ -27,8 +30,7 @@ public class GymFlipFitGymOwnerMenu {
      * @return True If login is successful, false otherwise.
      */
     boolean verifyGymOwner(String email, String password) {
-        System.out.println("owner verified!");
-        return true;
+        return flipFitGymOwnerService.validateLogin(email, password);
     }
 
     /*
@@ -37,7 +39,7 @@ public class GymFlipFitGymOwnerMenu {
      * @return true if login is successful, false otherwise.
      */
     boolean gymOwnerLogin(String email, String password) {
-        if (verifyGymOwner(email, password)) {
+        if (flipFitGymOwnerService.validateLogin(email, password)) {
         	LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String formattedDateTime = now.format(formatter);
@@ -99,6 +101,7 @@ public class GymFlipFitGymOwnerMenu {
         flipFitGym.setSlots(flipFitSlots);
         flipFitGym.setOwnerId(userId);
 
+        flipFitGymOwnerService.addGymWithSlots(flipFitGym);
     }
 
     /*
@@ -140,6 +143,8 @@ public class GymFlipFitGymOwnerMenu {
         flipFitGymOwner.setPhoneNo(phoneNo);
         flipFitGymOwner.setGyms(emptyGymList);
         flipFitGymOwner.setStatus("verified");
+
+        flipFitGymOwnerService.createGymOwner(flipFitGymOwner);
     }
 
     /*
@@ -147,8 +152,15 @@ public class GymFlipFitGymOwnerMenu {
      * @param userId The ID of the gym owner.
      */
     void displayGyms(String userId) {
-        System.out.println("all the gyms");
-        List<FlipFitGym> gymsList = new ArrayList<>();
-
+        List<FlipFitGym> gymsList = flipFitGymOwnerService.viewMyGyms(userId);
+        int x = 1;
+        for (FlipFitGym flipFitGym : gymsList) {
+            System.out.println("Gym " + x + ": Name " + flipFitGym.getGymName() + "     Address: " + flipFitGym.getGymAddress() + "       Location: " + flipFitGym.getLocation());
+            System.out.println("Slots: ");
+            for (FlipFitSlots slot : flipFitGym.getSlots()) {
+                System.out.println("Slot: " + slot.getSlotsId() + " Slot Time: " + slot.getStartTime() + " - " + (slot.getStartTime() + 1) + " Seats: " + slot.getSeatCount());
+            }
+            x++;
+        }
     }
 }

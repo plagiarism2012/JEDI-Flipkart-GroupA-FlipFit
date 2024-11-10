@@ -1,11 +1,13 @@
-package com.flipkart.application;
+package com.flipkart.client;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import com.flipkart.bean.*;
+import com.flipkart.business.FlipFitUserServiceOperations;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 /*
  * This class represents the customer menu for the GymFlipFit application
@@ -13,8 +15,16 @@ import java.util.Scanner;
  */
 public class GymFlipFitCustomerMenu {
     static Scanner obj = new Scanner(System.in);
+    FlipFitUserServiceOperations userServiceOperation = new FlipFitUserServiceOperations();
     FlipFitUser flipFitUser = new FlipFitUser();
-
+/*
+ * perfom user login and display the customer menu
+ * @param username The username of the customer
+ * @param pass The password of the customer
+ * @return True if login is successful, false otherwise
+ */
+    
+        
     public boolean userLogin(String username, String pass) {
         if (validateUser(username, pass)) {
             boolean flag = true;
@@ -27,6 +37,8 @@ public class GymFlipFitCustomerMenu {
                 System.out.println("Press 1 to Book your slot");
                 System.out.println("Press 2 to View all available gyms with slots");
                 System.out.println("Press 3 to View all your bookings");
+//                System.out.println("Press 4 to View all gyms by area");
+//                System.out.println("Press 5 to Cancel your slot");
                 System.out.println("Press 4 to Logout");
                 int choice = Integer.parseInt(obj.nextLine());
                 switch (choice) {
@@ -63,6 +75,11 @@ public class GymFlipFitCustomerMenu {
                             System.out.println("Booking ID: " + booking.getBookingId() + " Booking Status: " + booking.getStatus() + " Time: " + booking.getTime() + " GymID: " + booking.getGymId());
                         }
                         break;
+//                    case 4:
+//                        String location = "bangalore";
+//                        List<FlipFitGym> gyms2 = viewAllGymsByArea(location);
+//                        printGyms(gyms2);
+//                        break;
                     case 4:
                         flag = false;
                         break;
@@ -103,7 +120,7 @@ public class GymFlipFitCustomerMenu {
  *@return True if user credentials are valid, false otherwise
  */
     public boolean validateUser(String username, String pass) {
-        return true;
+        return userServiceOperation.validateUser(username, pass);
     }
 
 /*
@@ -112,7 +129,7 @@ public class GymFlipFitCustomerMenu {
  */
     List<FlipFitGym> viewAllGymswithSlots() {
         System.out.println("List of Gyms");
-        List<FlipFitGym> gymList = new ArrayList<>();
+        List<FlipFitGym> gymList = userServiceOperation.getAllGymsWithSlots();
         return gymList;
     }
 
@@ -124,7 +141,7 @@ public class GymFlipFitCustomerMenu {
  * @return True if the slot is booked successfully, false otherwise
  */
     public boolean bookSlot(int gymId, int time, String email) {
-        return true;
+        return userServiceOperation.bookSlots(gymId, time, email);
     }
 
 /*
@@ -133,6 +150,7 @@ public class GymFlipFitCustomerMenu {
  */
     public void cancelSlot(int bookingId) {
         System.out.println("Slot Cancelled");
+        userServiceOperation.cancelSlots(bookingId);
     }
 
 /*
@@ -141,8 +159,8 @@ public class GymFlipFitCustomerMenu {
  *@return List of user's bookings.
  */
     public List<FlipFitBookings> viewAllBookings(String userid) {
-        List<FlipFitBookings> ls=new ArrayList<>();
-        return ls;
+        List<FlipFitBookings> myBookings = userServiceOperation.getAllBookings(userid);
+        return myBookings;
     }
 
 /*
@@ -152,7 +170,7 @@ public class GymFlipFitCustomerMenu {
  */
     List<FlipFitGym> viewAllGymsByArea(String location) {
         System.out.println("List of Gyms");
-        List<FlipFitGym> gymList = new ArrayList<>();
+        List<FlipFitGym> gymList = userServiceOperation.getAllGymsByArea(location);
         return gymList;
     }
 
@@ -181,5 +199,7 @@ public class GymFlipFitCustomerMenu {
         flipFitUser.setPassword(password);
         flipFitUser.setUserName(ownerName);
         flipFitUser.setPhoneNumber(phoneNo);
+
+        userServiceOperation.createUser(flipFitUser);
     }
 }
