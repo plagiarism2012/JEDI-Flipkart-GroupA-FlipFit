@@ -1,0 +1,143 @@
+@options
+@packages
+-classpath
+'C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-core/2.0.33/dropwizard-core-2.0.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-util/2.0.33/dropwizard-util-2.0.33.jar;C:/Users/HP/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar;C:/Users/HP/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar;C:/Users/HP/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:/Users/HP/.m2/repository/org/checkerframework/checker-qual/3.25.0/checker-qual-3.25.0.jar;C:/Users/HP/.m2/repository/com/google/errorprone/error_prone_annotations/2.10.0/error_prone_annotations-2.10.0.jar;C:/Users/HP/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-jackson/2.0.33/dropwizard-jackson-2.0.33.jar;C:/Users/HP/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.10.5/jackson-datatype-guava-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.5/jackson-datatype-jsr310-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.5/jackson-datatype-jdk8-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.5/jackson-module-parameter-names-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.5/jackson-module-afterburner-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.10.5/jackson-datatype-joda-2.10.5.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-validation/2.0.33/dropwizard-validation-2.0.33.jar;C:/Users/HP/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar;C:/Users/HP/.m2/repository/org/glassfish/jakarta.el/3.0.4/jakarta.el-3.0.4.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-configuration/2.0.33/dropwizard-configuration-2.0.33.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.10.5/jackson-dataformat-yaml-2.10.5.jar;C:/Users/HP/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar;C:/Users/HP/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-logging/2.0.33/dropwizard-logging-2.0.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-logback/4.1.33/metrics-logback-4.1.33.jar;C:/Users/HP/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar;C:/Users/HP/.m2/repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar;C:/Users/HP/.m2/repository/io/dropwizard/logback/logback-throttling-appender/1.1.9/logback-throttling-appender-1.1.9.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-metrics/2.0.33/dropwizard-metrics-2.0.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-jersey/2.0.33/dropwizard-jersey-2.0.33.jar;C:/Users/HP/.m2/repository/org/glassfish/jersey/core/jersey-server/2.33/jersey-server-2.33.jar;C:/Users/HP/.m2/repository/org/javassist/javassist/3.29.1-GA/javassist-3.29.1-GA.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-jersey2/4.1.33/metrics-jersey2-4.1.33.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.10.5/jackson-jaxrs-json-provider-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.10.5/jackson-jaxrs-base-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.5/jackson-module-jaxb-annotations-2.10.5.jar;C:/Users/HP/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar;C:/Users/HP/.m2/repository/joda-time/joda-time/2.11.1/joda-time-2.11.1.jar;C:/Users/HP/.m2/repository/org/glassfish/hk2/hk2-api/2.6.1/hk2-api-2.6.1.jar;C:/Users/HP/.m2/repository/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1.jar;C:/Users/HP/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.6.1/aopalliance-repackaged-2.6.1.jar;C:/Users/HP/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.33/jersey-container-servlet-core-2.33.jar;C:/Users/HP/.m2/repository/org/glassfish/jersey/core/jersey-client/2.33/jersey-client-2.33.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-io/9.4.48.v20220622/jetty-io-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-servlets/2.0.33/dropwizard-servlets-2.0.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-annotation/4.1.33/metrics-annotation-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-jetty/2.0.33/dropwizard-jetty-2.0.33.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-servlets/9.4.48.v20220622/jetty-servlets-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-continuation/9.4.48.v20220622/jetty-continuation-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-http/9.4.48.v20220622/jetty-http-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-lifecycle/2.0.33/dropwizard-lifecycle-2.0.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-core/4.1.33/metrics-core-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-jetty9/4.1.33/metrics-jetty9-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-jvm/4.1.33/metrics-jvm-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-jmx/4.1.33/metrics-jmx-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-servlets/4.1.33/metrics-servlets-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-json/4.1.33/metrics-json-4.1.33.jar;C:/Users/HP/.m2/repository/com/helger/profiler/1.1.1/profiler-1.1.1.jar;C:/Users/HP/.m2/repository/io/dropwizard/metrics/metrics-healthchecks/4.1.33/metrics-healthchecks-4.1.33.jar;C:/Users/HP/.m2/repository/io/dropwizard/dropwizard-request-logging/2.0.33/dropwizard-request-logging-2.0.33.jar;C:/Users/HP/.m2/repository/ch/qos/logback/logback-access/1.2.11/logback-access-1.2.11.jar;C:/Users/HP/.m2/repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar;C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5.1/jackson-databind-2.10.5.1.jar;C:/Users/HP/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar;C:/Users/HP/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar;C:/Users/HP/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar;C:/Users/HP/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar;C:/Users/HP/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-security/9.4.48.v20220622/jetty-security-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-server/9.4.48.v20220622/jetty-server-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.48.v20220622/jetty-servlet-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-util-ajax/9.4.48.v20220622/jetty-util-ajax-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/jetty-util/9.4.48.v20220622/jetty-util-9.4.48.v20220622.jar;C:/Users/HP/.m2/repository/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.4/jetty-setuid-java-1.0.4.jar;C:/Users/HP/.m2/repository/org/glassfish/hk2/external/jakarta.inject/2.6.1/jakarta.inject-2.6.1.jar;C:/Users/HP/.m2/repository/org/glassfish/jersey/core/jersey-common/2.33/jersey-common-2.33.jar;C:/Users/HP/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar;C:/Users/HP/.m2/repository/org/glassfish/jersey/ext/jersey-bean-validation/2.33/jersey-bean-validation-2.33.jar;C:/Users/HP/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar;C:/Users/HP/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar;C:/Users/HP/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar;C:/Users/HP/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar;C:/Users/HP/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/JEDI-Flipkart-GroupA-FlipFit/JEDI-Group-A-FlipFit-DropWizard/src/main/java;C:/JEDI-Flipkart-GroupA-FlipFit/JEDI-Group-A-FlipFit-DropWizard/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/JEDI-Flipkart-GroupA-FlipFit/JEDI-Group-A-FlipFit-DropWizard/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'flipfit_d 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/JEDI-Flipkart-GroupA-FlipFit/JEDI-Group-A-FlipFit-DropWizard/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'flipfit_d 1.0-SNAPSHOT API'
+com.flipkart.app
+com.flipkart.constants
+com.flipkart.dao
+com.flipkart.exception
+com.flipkart.model
+com.flipkart.restcontroller
+com.flipkart.service
+com.flipkart.utils
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-core\2.0.33\dropwizard-core-2.0.33.jar = 1731266276153
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-util\2.0.33\dropwizard-util-2.0.33.jar = 1731266277087
+C:\Users\HP\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar = 1731266277108
+C:\Users\HP\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar = 1705604605907
+C:\Users\HP\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1705604605907
+C:\Users\HP\.m2\repository\org\checkerframework\checker-qual\3.25.0\checker-qual-3.25.0.jar = 1731266276507
+C:\Users\HP\.m2\repository\com\google\errorprone\error_prone_annotations\2.10.0\error_prone_annotations-2.10.0.jar = 1731266276555
+C:\Users\HP\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar = 1705604605940
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-jackson\2.0.33\dropwizard-jackson-2.0.33.jar = 1731266276567
+C:\Users\HP\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.3\caffeine-2.9.3.jar = 1731266277357
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.5\jackson-core-2.10.5.jar = 1731266277003
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-guava\2.10.5\jackson-datatype-guava-2.10.5.jar = 1731266276768
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.5\jackson-datatype-jsr310-2.10.5.jar = 1731266277034
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.10.5\jackson-datatype-jdk8-2.10.5.jar = 1731266277602
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.10.5\jackson-module-parameter-names-2.10.5.jar = 1731266277310
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\module\jackson-module-afterburner\2.10.5\jackson-module-afterburner-2.10.5.jar = 1731266277299
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.10.5\jackson-datatype-joda-2.10.5.jar = 1731266277311
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-validation\2.0.33\dropwizard-validation-2.0.33.jar = 1731266278005
+C:\Users\HP\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar = 1705604593341
+C:\Users\HP\.m2\repository\org\glassfish\jakarta.el\3.0.4\jakarta.el-3.0.4.jar = 1731266277540
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-configuration\2.0.33\dropwizard-configuration-2.0.33.jar = 1731266277865
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.10.5\jackson-dataformat-yaml-2.10.5.jar = 1731266277934
+C:\Users\HP\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar = 1731266277739
+C:\Users\HP\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar = 1731266277843
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-logging\2.0.33\dropwizard-logging-2.0.33.jar = 1731266277897
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-logback\4.1.33\metrics-logback-4.1.33.jar = 1731266277931
+C:\Users\HP\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar = 1731266278020
+C:\Users\HP\.m2\repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar = 1731266278084
+C:\Users\HP\.m2\repository\io\dropwizard\logback\logback-throttling-appender\1.1.9\logback-throttling-appender-1.1.9.jar = 1731266278124
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-metrics\2.0.33\dropwizard-metrics-2.0.33.jar = 1731266278325
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-jersey\2.0.33\dropwizard-jersey-2.0.33.jar = 1731266278264
+C:\Users\HP\.m2\repository\org\glassfish\jersey\core\jersey-server\2.33\jersey-server-2.33.jar = 1731266279017
+C:\Users\HP\.m2\repository\org\javassist\javassist\3.29.1-GA\javassist-3.29.1-GA.jar = 1731266279126
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-jersey2\4.1.33\metrics-jersey2-4.1.33.jar = 1731266278780
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\jaxrs\jackson-jaxrs-json-provider\2.10.5\jackson-jaxrs-json-provider-2.10.5.jar = 1731266278940
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\jaxrs\jackson-jaxrs-base\2.10.5\jackson-jaxrs-base-2.10.5.jar = 1731266279056
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.10.5\jackson-module-jaxb-annotations-2.10.5.jar = 1731266279274
+C:\Users\HP\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar = 1731266279403
+C:\Users\HP\.m2\repository\joda-time\joda-time\2.11.1\joda-time-2.11.1.jar = 1731266279300
+C:\Users\HP\.m2\repository\org\glassfish\hk2\hk2-api\2.6.1\hk2-api-2.6.1.jar = 1731266279448
+C:\Users\HP\.m2\repository\org\glassfish\hk2\hk2-utils\2.6.1\hk2-utils-2.6.1.jar = 1731266279493
+C:\Users\HP\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.6.1\aopalliance-repackaged-2.6.1.jar = 1731266279809
+C:\Users\HP\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\2.33\jersey-container-servlet-core-2.33.jar = 1731266279578
+C:\Users\HP\.m2\repository\org\glassfish\jersey\core\jersey-client\2.33\jersey-client-2.33.jar = 1731266279699
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-io\9.4.48.v20220622\jetty-io-9.4.48.v20220622.jar = 1731266279703
+C:\Users\HP\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar = 1705604594704
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-servlets\2.0.33\dropwizard-servlets-2.0.33.jar = 1731266280151
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-annotation\4.1.33\metrics-annotation-4.1.33.jar = 1731266279856
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-jetty\2.0.33\dropwizard-jetty-2.0.33.jar = 1731266280473
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-servlets\9.4.48.v20220622\jetty-servlets-9.4.48.v20220622.jar = 1731266279905
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-continuation\9.4.48.v20220622\jetty-continuation-9.4.48.v20220622.jar = 1731266280238
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-http\9.4.48.v20220622\jetty-http-9.4.48.v20220622.jar = 1731266280043
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-lifecycle\2.0.33\dropwizard-lifecycle-2.0.33.jar = 1731266280204
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.33\metrics-core-4.1.33.jar = 1731266280131
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-jetty9\4.1.33\metrics-jetty9-4.1.33.jar = 1731266280622
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-jvm\4.1.33\metrics-jvm-4.1.33.jar = 1731266280532
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-jmx\4.1.33\metrics-jmx-4.1.33.jar = 1731266280611
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-servlets\4.1.33\metrics-servlets-4.1.33.jar = 1731266280537
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-json\4.1.33\metrics-json-4.1.33.jar = 1731266280807
+C:\Users\HP\.m2\repository\com\helger\profiler\1.1.1\profiler-1.1.1.jar = 1731266280900
+C:\Users\HP\.m2\repository\io\dropwizard\metrics\metrics-healthchecks\4.1.33\metrics-healthchecks-4.1.33.jar = 1731266281027
+C:\Users\HP\.m2\repository\io\dropwizard\dropwizard-request-logging\2.0.33\dropwizard-request-logging-2.0.33.jar = 1731266281162
+C:\Users\HP\.m2\repository\ch\qos\logback\logback-access\1.2.11\logback-access-1.2.11.jar = 1731266281053
+C:\Users\HP\.m2\repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar = 1731266281047
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.5\jackson-annotations-2.10.5.jar = 1731266281038
+C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.5.1\jackson-databind-2.10.5.1.jar = 1731266282099
+C:\Users\HP\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar = 1705604605594
+C:\Users\HP\.m2\repository\jakarta\servlet\jakarta.servlet-api\4.0.4\jakarta.servlet-api-4.0.4.jar = 1731266281395
+C:\Users\HP\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar = 1731266281280
+C:\Users\HP\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\2.1.6\jakarta.ws.rs-api-2.1.6.jar = 1731266281357
+C:\Users\HP\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.8.1\argparse4j-0.8.1.jar = 1731266281572
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-security\9.4.48.v20220622\jetty-security-9.4.48.v20220622.jar = 1731266281686
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-server\9.4.48.v20220622\jetty-server-9.4.48.v20220622.jar = 1731266282112
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-servlet\9.4.48.v20220622\jetty-servlet-9.4.48.v20220622.jar = 1731266281800
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-util-ajax\9.4.48.v20220622\jetty-util-ajax-9.4.48.v20220622.jar = 1731266281816
+C:\Users\HP\.m2\repository\org\eclipse\jetty\jetty-util\9.4.48.v20220622\jetty-util-9.4.48.v20220622.jar = 1731266282210
+C:\Users\HP\.m2\repository\org\eclipse\jetty\toolchain\setuid\jetty-setuid-java\1.0.4\jetty-setuid-java-1.0.4.jar = 1731266282367
+C:\Users\HP\.m2\repository\org\glassfish\hk2\external\jakarta.inject\2.6.1\jakarta.inject-2.6.1.jar = 1731266282223
+C:\Users\HP\.m2\repository\org\glassfish\jersey\core\jersey-common\2.33\jersey-common-2.33.jar = 1731266282948
+C:\Users\HP\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar = 1731266282661
+C:\Users\HP\.m2\repository\org\glassfish\jersey\ext\jersey-bean-validation\2.33\jersey-bean-validation-2.33.jar = 1731266282368
+C:\Users\HP\.m2\repository\org\hibernate\validator\hibernate-validator\6.1.7.Final\hibernate-validator-6.1.7.Final.jar = 1731266283459
+C:\Users\HP\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar = 1731266282564
+C:\Users\HP\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar = 1705604597413
+C:\Users\HP\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar = 1705604593702
+C:\Users\HP\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar = 1731266283510
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\src\main\java = 1731342256454
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\generated-sources\annotations = 1731351539783
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\allclasses-index.html = 1731351549600
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\allpackages-index.html = 1731351549608
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\constant-values.html = 1731351549249
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\copy.svg = 1731351549684
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\element-list = 1731351549105
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\help-doc.html = 1731351549670
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\index-all.html = 1731351549648
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\index.html = 1731351549567
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\member-search-index.js = 1731351549614
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\module-search-index.js = 1731351549610
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\overview-summary.html = 1731351549653
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\overview-tree.html = 1731351549562
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\package-search-index.js = 1731351549611
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\script.js = 1731351549682
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\search-page.js = 1731351549689
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\search.html = 1731351549651
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\search.js = 1731351549687
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\serialized-form.html = 1731351549264
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\stylesheet.css = 1731351549681
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\tag-search-index.js = 1731351549615
+C:\JEDI-Flipkart-GroupA-FlipFit\JEDI-Group-A-FlipFit-DropWizard\target\apidocs\type-search-index.js = 1731351549612
