@@ -28,14 +28,19 @@ git clone
 2. Install the dependencies.
 
 ```bash
-mvn install
+mvn clean install
+```
+
+3. Create JAR fiel
+```
+mvn clean package
 ```
 
 3. Run the application.
 
 ```bash
 
-java --jar flipfit.jar server
+java -jar flipfit.jar server
 ```
 
 ## Contributing
