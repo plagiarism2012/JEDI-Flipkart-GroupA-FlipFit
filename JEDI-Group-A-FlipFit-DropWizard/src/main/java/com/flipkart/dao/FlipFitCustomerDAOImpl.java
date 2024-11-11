@@ -177,15 +177,15 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         List<FlipFitBookings> flipFitBookings = new ArrayList<>();
-
+        System.out.println("nrie" + userId);
         try {
-            String sqlQuery = "SELECT * FROM Booking WHERE userId = ?";
+            String sqlQuery = "SELECT * FROM Booking WHERE UserEmail = ?";
             preparedStatement = conn.prepareStatement(sqlQuery);
             preparedStatement.setString(1, userId);
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("userId");
+                int id = resultSet.getInt("bookingId");
                 int date = resultSet.getInt("date");
                 int time = resultSet.getInt("time");
                 int slotId = resultSet.getInt("slotId");
@@ -214,7 +214,7 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
         PreparedStatement preparedStatement = null;
 
         try {
-            String deleteQuery = "DELETE FROM Booking WHERE userID = ?";
+            String deleteQuery = "DELETE FROM Booking WHERE bookingId = ?";
             preparedStatement = conn.prepareStatement(deleteQuery);
             preparedStatement.setInt(1, bookingId);
 
